@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "oisinakscluster-452d"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "oisinakscluster-452d"
+    spec:
+      containers:
+        - name: "oisinakscluster-452d"
+          image: "oisinaks.azurecr.io/oisinakscluster"
+          ports:
+          - containerPort: 80
